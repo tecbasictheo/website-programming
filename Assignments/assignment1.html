@@ -2,35 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment One</title>
-</head>
-<body>
-    <link rel="stylesheet" href="style.css">
-     <style>
+    <style>
+        /* baumans-regular - latin */
+   @font-face {
+     font-display: swap; 
+     font-family: 'Baumans';
+     font-style: normal;
+     font-weight: 400;
+     src: url('../fonts/baumans-v18-latin-regular.woff2') format('woff2'); 
+     }
+     images {
+        display: flex;
+        gap: 1rem;    
+        overflow-x: auto;
+        flex-wrap: wrap
+     }
+        h1 {
+            font-family: "Baumans", swap, normal;
+            font-size: 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: rgb(53, 117, 236);
+            margin-left: 1rem;
+        }
+        h1::before,
+        h1::after { 
+            content: "";
+            width: 2rem;
+            height: 5rem;  
+        }
+
+        h1::before {
+             transform: scaleX(-1);
+        }
+        header p {
+            font-size: 0.7rem;
+            text-align: right;
+            padding-right: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        header, footer {
+            background-color:   cornflowerblue;
+            padding: 2rem 2rem 2rem 2rem;
+            box-sizing: border-box;
+            color: white;
+            text-align: center;
+            width: 100%;
+            height: 7rem;
+        }
+        footer {
+            display: flex;
+            align-items: flex-end; 
+            justify-content: left;
+            padding-bottom: 1rem;
+        }
+        header {
+            position: relative;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+            max-width: 40rem;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            padding-left: 1.5rem;
+            align-items: center;
+        }
+
         body {
             background-color: rgb(130, 173, 226);
-            text-align: left;
-            margin: 20px;
-            padding: 20px;
-            max-width: device-width;
-            font-family: fantasy;
-            font-size: small;
+            margin: 0;
+            font-family: "Baumans", swap, normal;
+            font-size: 1.5rem;
             text-decoration: none;
             color: rgb(209, 218, 245);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.01;
+            min-height: 100vh;
+        }
+
+        list_sitesidea {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
         }
     </style>
+</head>
+<body>
 
-    <header id="topwebsite" style="background-color: cornflowerblue; padding: 30px; margin: -30px; margin-bottom: 0; text-align: center;  top: 0; left: 0; width: 100%;">
+    <header id="topwebsite">
         <nav>
             <!-- here a walking gif -> with camera -->
+            <h1>☆ - Capturing Moments - ☆</h1>
         </nav>
+            <p>Theo's Photography</p>
+
     </header>
 
     <!-- my main part(body of my website) -->
     <main>
     <section id="main">
-        <h2 style="text-align: center; color: rgb(53, 117, 236);">idea for final project by me</h3>
+        <h3 style="text-align: left; color: rgb(53, 117, 236);">idea for final project</h3>
 
         <p>
             I want to do an picture focused website and feature there pictures I photographed myself. It is supposed to be more or less like an digital gallery of my work. 
@@ -56,20 +145,19 @@
         <h3 style="color: rgb(81, 117, 236);">Some images I want to feature:</h3>
         <!-- how to do scroll function? -->
         <section id="images">
-            <img src="" alt="i1" width="100" style="vertical-align:auto;">
-            <img src="" alt="i1" width="100" style="vertical-align:auto;">
-            <img src="" alt="i1" width="100" style="vertical-align:auto;">
-            <img src="" alt="i1" width="100" style="vertical-align:auto;">
-
-
+            <img src="../images/DSC00258.jpeg" alt="i1" width="48%" style="vertical-align:auto;">
+            <img src="../images/DSC00373.jpeg" alt="i2" width="48%" style="vertical-align:auto;">
+            <img src="../images/DSC00482.jpeg" alt="i3" width="48%" style="vertical-align:auto;">
+            <img src="../images/DSC00778.jpeg" alt="i4" width="48%" style="vertical-align:auto;">
+            <img src="../images/DSC01057.jpeg" alt="i5" width="48%" style="vertical-align:auto;">
+            <img src="../images/DSC01211.jpeg" alt="i6" width="48%" style="vertical-align:auto;">
 
         </section>
     </section>
     </main>
 
-    <footer id="endwebsite" style="background-color: cornflowerblue; padding: 20px; margin: -30px; margin-top: 30px; text-align: center;  top: 10; left: 0; width: 100%;">
-        <p style="color: white; font-size: 7px;text-align: left; text-align: bottom;">© 2024 My Photography Website. All rights reserved.</p>
-
+    <footer id="endwebsite">
+        <p style="color: white; font-size: 7px">© 2024 My Photography Website. All rights reserved.</p>
     </footer>
 </body>
 </html>
